@@ -28,14 +28,14 @@ public class ThreadTester {
 		
 		thr1.start();
 		thr2.start();
-		
+		/*
 		try {
 			thr1.join();
 			thr2.join();
 		} catch (InterruptedException ie) { 
 			ie.printStackTrace(); 
 		}
-		
+		*/
 		System.out.println("Main finalizando...");
 	}
 }

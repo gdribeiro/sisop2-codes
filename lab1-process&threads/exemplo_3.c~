@@ -14,7 +14,7 @@ int main( int argc, char **argv) {
     double *res;
     int status;
 
-    status = pthread_create(&thr, NULL, test_routine, NULL);
+    status = pthread_create(&thr, NULL, test_routinte, NULL);
     if (status != 0)
         exit(1);
 

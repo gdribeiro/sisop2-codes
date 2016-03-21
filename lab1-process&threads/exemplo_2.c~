@@ -26,7 +26,6 @@ void *do_it_2(void *arg) {
 int main( int argc, char **argv) {
     pthread_t th1, th2;
     int n = 10;
-	m = 1;
 
     pthread_create(&th1, NULL, do_it_1, &n);
     pthread_create(&th2, NULL, do_it_2, &n);
