@@ -19,7 +19,7 @@ class MyMonitor {
 		
         /* fix me */
 		turn = (turn + 1)% 2;
-		this.notify();     
+		this.nitify();     
 	}
 }
 
