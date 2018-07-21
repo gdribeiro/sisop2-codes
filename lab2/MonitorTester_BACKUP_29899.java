@@ -5,6 +5,11 @@ class MyMonitor {
 	private int data = 0;
 	private int turn = 1;
     
+<<<<<<< HEAD
+	public void update(int id) throws InterruptedException {
+		
+        /* fix me */
+=======
 	public synchronized void update(int id) throws InterruptedException {
 		
         /* fix me */
@@ -12,14 +17,19 @@ class MyMonitor {
 			this.wait();
 		}
 		
+>>>>>>> de6795a68cc35ff71c70d5817a84e53b3d86e831
 		
         System.out.println("Thread ID = " + id + " vai atualizar ...");
         data++; Thread.currentThread().sleep(new Random().nextInt(3000));
         System.out.println("Thread ID = " + id + " atualizou...");		
 		
+<<<<<<< HEAD
+        /* fix me */    
+=======
         /* fix me */
 		turn = (turn + 1)% 2;
 		this.notify();     
+>>>>>>> de6795a68cc35ff71c70d5817a84e53b3d86e831
 	}
 }
 
@@ -58,4 +68,8 @@ public class MonitorTester {
 		t1.start();
 		t2.start();		
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> de6795a68cc35ff71c70d5817a84e53b3d86e831

@@ -5,21 +5,15 @@ class MyMonitor {
 	private int data = 0;
 	private int turn = 1;
     
-	public synchronized void update(int id) throws InterruptedException {
+	public void update(int id) throws InterruptedException {
 		
         /* fix me */
-		while(id != turn){
-			this.wait();
-		}
-		
 		
         System.out.println("Thread ID = " + id + " vai atualizar ...");
         data++; Thread.currentThread().sleep(new Random().nextInt(3000));
         System.out.println("Thread ID = " + id + " atualizou...");		
 		
-        /* fix me */
-		turn = (turn + 1)% 2;
-		this.notify();     
+        /* fix me */    
 	}
 }
 
